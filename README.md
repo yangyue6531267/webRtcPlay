@@ -1,6 +1,6 @@
-# 软手柄
+# 点对点通话
 
-基于 WebRTC 的软手柄，基于 janus 开发。
+基于 WebRTC 的实时通讯，基于 janus 开发。
 
 # 注意
 
@@ -10,7 +10,7 @@
 
 
 ## 概述
-通过 janus 后台的插件 "janus.plugin.sipserver" 实现的软手柄操作，以支持 SIP 的软电话功能。
+通过 janus 后台的插件 "janus.plugin.sipserver" 实现的实时通讯操作，以支持 SIP 的软电话功能。
 
 大致功能实现说明：
 - 在 janus-handler.ts 中，初始化时 attach 服务端插件 "janus.plugin.sipserver"，初始化得到 sipcall 属性（后续操作都基于该对象进行）
