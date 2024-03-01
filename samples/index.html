@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC 软手柄示例</title>
+    <style>
+        .video-container {
+            display: inline-block;
+            width: 45%;
+            min-width: 480px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebRTC 软手柄示例</h1>
+    <div>
+        <fieldset>
+            <legend>注册软手柄</legend>
+            <label>janus地址：<input id="txtServer" type="text" style="width: 300px;" value=""></label><br>
+            <label>注册号码：<input id="txtUsername" type="text" style="width: 100px" value="7002" /></label><br>
+            <button id="btnRegister">注册</button>
+            <button id="btnUnregister">注销</button>
+            <span id="registerResult"></span>
+        </fieldset>
+        <fieldset>
+            <legend>设备控制</legend>
+            <lable>音频设备列表：<select id="selAudioDevice"></select></lable>
+            <lable>视频设备列表：<select id="selVideoDevice"></select></lable>
+            <!-- <button id="btnSetDevice">设置设备</button> -->
+            <br>
+            <label><input type="checkbox" id="chkFrontCamera" /> 使用前置摄像头</label>
+            <button id="btnChangeCamera">通话中切换摄像头</button>
+            <br>
+            <label><input type="checkbox" id="chkEnableCamera" checked /> 启用本地摄像头</label>
+            <br>
+            <span>（在多个音频设备间切换）</span><button id="btnChangeAudio">通话中切换音频</button>
+            <br>
+            <label><input type="checkbox" id="chkAudioInputMute" /> 麦克风静音</label>
+            <label><input type="checkbox" id="chkAudioOutputMute" /> 音频播放静音</label>
+        </fieldset>
+        <fieldset>
+            <legend>注册软手柄</legend>
+            <label>呼叫号码：<input id="txtCalled" type="text" style="width: 100px" value="7003" /></label>
+            <button id="btnAudioCall">音频呼叫</button>
+            <button id="btnVideoCall">视频呼叫</button>
+            <button id="btnBackCall">视频返呼</button>
+            <button id="btnVideoRecv">视频接收</button>
+        </fieldset>
+        <fieldset>
+            <legend>通话控制</legend>
+            <div>
+                <div id="inCallInfo"></div>
+                <button id="btnAudioAnswer">音频应答</button>
+                <button id="btnVideoAnswer">视频应答</button>
+                <button id="btnHangup">挂断</button>
+                <div class="video-wrapper">
+                    <div id="remoteVideo" class="video-container"></div>
+                    <div id="localVideo" class="video-container"></div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+<!-- 引入 vConsole -->
+<!-- <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+<script>
+  // 初始化
+  var vConsole = new window.VConsole();
+  console.log('Hello world');
+</script> -->
+<!-- <script src="ws-console.js"></script> -->
+</body>
+</html>

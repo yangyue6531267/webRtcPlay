@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "charset": "UTF-8",
+        "lib": [
+            "ES6",
+            "DOM"
+        ],
+        "target": "ES6",
+        "module": "ES6",
+        "strict": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+    },
+    "include": [ "src/index.ts" ],
+    "exclude": [ "dist", "src/impl/**" ]
+}
